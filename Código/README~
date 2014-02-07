@@ -3,7 +3,6 @@ git (para controle de versão)
 gcc
 g++
 gnuplot
-O sistema deve estar com idioma em inglês ou, ao menos, com sistema de pontuação de decimal em inglês, como dependência do gnuplot para gerar gráficos.
 
 Os arquivos da pasta possuem as seguintes características e funções:
 Evolution é usado para gravar os melhores indivíduos por geração;
