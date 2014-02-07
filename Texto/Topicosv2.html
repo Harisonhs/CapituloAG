@@ -1,0 +1,286 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<style type="text/css">
+
+DIV.esq {
+	float: left;
+	width: 15%;
+	height: 98%;
+	margin: 0px 5px 3px 3px;
+	z-index:999; 
+	position: fixed;
+	overflow-x: hidden; overflow-y: scroll;	
+	background: #C9F8C9;
+}
+
+DIV.cen {
+	float: left;
+	text-align: left;
+	width: 65%;
+	position: auto;
+	margin: 0px 10px 10px 10px;
+	margin-left: 18%;
+}
+
+DIV.dir {
+	float: right;
+	width: 13%;
+	height: 5500px;
+	position:auto;
+	overflow: visible;
+	background: #C9F8C9;
+	margin: 0px 3px 3px 3px;
+	padding: 0px 10px 5px 5px;
+}
+
+A.menu {
+	text-decoration: none;
+	color: #000000;
+}
+
+P {
+	text-align: left;
+	padding-left: 10px;
+}
+
+H1 {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 18pt;
+	color: navy;
+}
+
+H3 {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	color: navy;
+	padding-bottom: 3px;
+	padding-top: 15px;
+}
+
+H4{
+	padding-left: 40px;
+}
+</style>
+
+<script type="text/javascript">
+
+function exibe(id) {
+	if(document.getElementById(id).style.display=="none") {
+		document.getElementById(id).style.display = "inline";
+		document.getElementById(id+'icon').innerHTML = " <img src='icon_Menos.gif'/ alt='-'> ";
+	}
+	else {
+		document.getElementById(id).style.display = "none";
+		document.getElementById(id+'icon').innerHTML = " <img src='icon_Mais.gif'/ alt='+'> ";
+	}
+}
+
+
+
+</script>
+
+<TITLE>Cap. AG</TITLE>
+</HEAD>
+<BODY>
+
+<DIV class="esq">
+<!-- <H2>Seções</H2> -->
+<span font-size="15px"><center>Índice</center></span>
+<BR />
+<a href="javascript: exibe('intro');" id="introicon" class="menu"> <img src='icon_Mais.gif'/ alt='+'> </a><a href="#Introducao" class="menu">Introdução</a><br />
+	<DIV id="intro" style="display: none;">
+	<UL>
+	<LI><a href="#Objetivos" class="menu">Proposta do capítulo</a></LI>
+		<UL>
+		<LI><a href="#ParalelismoParaAG" class="menu">O paralelismo como proposta de melhoria</a></LI>
+		<LI><a href="#AGEstudoCaso" class="menu">O Algoritmo Genético como estudo de caso</a></LI>
+		</UL>
+	<!--<LI><a href="#Leituras">Leituras complementares</a></LI>-->
+	<LI><a href="#Locais" class="menu">Locais e grupos de referência</a></LI>
+	<LI><a href="#NovasPesquisas" class="menu">Novas linhas de pesquisa</a></LI>
+	</UL>
+	</DIV>
+
+<a href="javascript: exibe('AG');" id="AGicon" class="menu"> <img src='icon_Mais.gif'/ alt='+'> </a><a href="#AlgoritmosGeneticos" class="menu">Algoritmos Genéticos</a><br />
+	<DIV id="AG" style="display: none;">
+	<UL>
+	<LI><a href="#ConceitosUtilizados" class="menu">Conceitos utilizados</a></LI>
+	<LI><a href="#BoasAplicacoes" class="menu">Aplicações indicadas</a></LI> <!-- Aplicações onde o AG / AGP é viável e obtém bons resultados -->
+	<LI><a href="#MasAplicacoes" class="menu">Aplicações não indicadas</a></LI>
+	<LI><a href="#AGPs" class="menu">Os AGs e o Paralelismo</a></LI>
+	<LI><a href="#Implementacao" class="menu">Simples Implementações</a></LI> <!-- Apresentação de aplicações reais onde o AG pode ser aplicado. Dando maior destaque as mais facilmente implementadas. Programas populares que usam AG -->
+	</UL>
+	</DIV>
+	
+<a href="javascript: exibe('Prat');" id="Praticon" class="menu"> <img src='icon_Mais.gif'/ alt='+'> </a><a href="#Praticas" class="menu">Práticas</a><br />
+	<DIV id="Prat" style="display: none;">
+	<UL>
+	<LI><a href="#ExSimples" class="menu">Exemplos simples</a></LI>
+	</UL>
+	</DIV>
+	
+<a href="javascript: exibe('Conc');" id="Concicon" class="menu"> <img src='icon_Mais.gif'/ alt='+'> </a><a href="#Conclusao" class="menu">Conclusão</a><br />
+	<DIV id="Conc" style="display: none;">
+	<UL>
+	<LI><a href="#TrabFut" class="menu">Trabalhos Futuros</a></LI>
+	</UL>
+	</DIV>
+
+<a href="javascript: exibe('Ref');" id="Reficon" class="menu"> <img src='icon_Mais.gif'/ alt='+'> </a><a href="#Referencias" class="menu">Referências</a><br />
+	<DIV id="Ref" style="display: none;">
+	<UL>
+	<LI><a href="#RefDisserGustavo" class="menu">[Soares, 1997/</a></LI>
+	<LI><a href="#RefGoldberg86" class="menu">[Goldberg, 1989]</a></LI>
+	<LI><a href="#RefLinden08" class="menu">[Linden, 2008]</a></LI>
+	<LI><a href="#RefMonoHarison" class="menu">[Silva, 2012]</a></LI>
+	<LI><a href="#RefViana09" class="menu">[Viana, 2009]</a></LI>
+	</UL>
+	</DIV>
+	
+</DIV> <!-- fim DIV esq -->
+
+
+<!-- DIV cen -->
+<DIV class="cen">
+<img border="0" width="100" height="89" align="left" src="logo_puc.jpg" / alt="Logo PUC">
+<H1> <center>Programa de Pós-Graduação em Engenharia Elétrica</center></H1>
+<span font-size="16px"> <center>Pontifícia Universidade Católica de Minas Gerais</center></span>
+<BR />
+<BR />
+
+<H2>Algoritmo Genético</H2>
+Para este capítulo é esperado um leitor que já tenha conhecimentos em AG. Caso não tenha esse conhecimento, sugerimos que o leitor leia os trabalhos <a href="#RefGoldberg86">[Goldberg, 1989]</a> onde são abordados conceitos básicos do AG. Em português, uma boa referência é <a href="#RefLinden08">[Linden, 2008]</a>.
+
+<!-- Introdução -->
+<H3 id="Introducao">Introdução</H3>
+<P>Obter a resolução de problemas da classe dos Não-Polinomiais Completos (NPC) através de algoritmo exato pode não ser viável por ser de tempo de execução exponencial em função do tamanho da entrada. Este problema pode ser facilmente observado através do Problema do Caixeiro Viajante (PCV). A cada nova cidade inserida no conjunto de cidades a visitar o tempo de execução aumenta exponencialmente. Então, para se obter resultados para estes problemas é necessário o uso de heurísticas, como o Algoritmo Genético (AG).</P>
+
+<H4 id="Objetivos">Proposta do capítulo</H4>
+<P>Este capítulo não propõe melhorias ao Algoritmo Genético (AG), nem propõe melhorias para a programação paralela, tampouco seu objetivo é de ensinar os conceitos básicos destes. A proposta deste capítulo é apresentar a possibilidade da programação paralela a pessoas com certa experiência em AGs, ou apresentar um possível caso de estudo, o AG, a pessoas com certa experiência em programação paralela.</P>
+<P>Os AGs possuem um paralelismo implícito, no nível da busca por possíveis soluções dentre determinados esquemas [Soares, 1997], o que permite que o número total de indivíduos da população avaliados a cada geração seja o equivalente ao cubo deste valor.</P>
+<P>Desta forma, os AGs são heurísticas que buscam reduzir o espaço da busca da solução (frequentemente o espaço original do problema é exponencial), indicando um provável caminho para a solução ótima.</P>
+<P>Este espaço de soluções pode ser reduzido mais rapidamente se diferentes processos da máquina puderem procurar em diferentes regiões deste espaço. Neste ponto a programação paralela surge como possível solução para o profissional que já trabalha com AGs.</P>
+<P>Os AGs podem ser implementados de diversas formas diferentes, mantendo sempre suas funções bem coesas e pouco acopladas de forma que em um mesmo programa possam coexistir diversos métodos de evolução dos indivíduos de uma população. Estes métodos, geralmente, são independentes entre si e podem ser executados ao mesmo tempo.
+Neste ponto o AG surge como um possível estudo de caso para o profissional de programação paralela, que pode, por exemplo, comparar a performance de diferentes linguagens de programação ou diferentes arquiteturas computacionais.</P>
+
+<H5 id="ParalelismoParaAG">O paralelismo como proposta de melhoria</H5>
+
+<H5 id="AGEstudoCaso">O Algoritmo Genético como estudo de caso</H5>
+<P>Esta subseção observa o capítulo do ponto de vista do profissional de programação paralela que pode usar o AG para comparação de diferentes linguagens de programação (ou bibliotecas/APIs) e/ou diferentes arquiteturas.</P>
+<P>Além destas possibilidades, este profissional pode utilizar os AGs com propósitos comerciais, outras propostas com finalidades científicas, entre outros. As aplicações que podem usar o AG com paralelismo (AGP) vão desde onde o entendimento técnico do algoritmo permitir até onde a criatividade deixar.
+A criatividade deve ser individual e este capítulo, provavelmente, pouco a inspire, porém este capítulo pode auxiliar com a parte técnica.</P>
+<P>Poucos livros abordam a implementação do AG, muito menos do AGP, com precisão em detalhes que podem ser de fundamental importância. Por exemplo, geralmente fala-se que a taxa de mutação deve ser baixa. Mas, quanto é isso?</P>
+
+<H4 id="Locais">Locais e grupos de pesquisa</H4>
+<P>Existem diversos grupos de pesquisa sobre AGs em todo o Brasil, como o <a href="http://dgp.cnpq.br/buscaoperacional/detalhegrupo.jsp?grupo=0333304T5FMW7H">Grupo de Pesquisa em Computação Evolucionária, Análise Intervalar e Mineração de Dados</a>, na Universidade Federal de Minas Gerais, que possui diversos pesquisadores com trabalhos sobre os AGs.</P>
+<P>Grupos como este podem promover uma troca de experiências entre os participantes, levando a prevenção de erros por tentativas antes frustradas, ou com a colaboração de diferentes pontos de vista. Assim, novos conhecimentos são produzidos, e em uma tendência natural de uma pesquisa, este conhecimento é tornado público.</P>
+<P>Não há limitações no AG que não o permita ser utilizado em diversas áreas, o que pode levar a publicações em diversos congressos de diferentes áreas do conhecimento. Por exemplo, uma proposta de Algoritmo Genético Paralelo em um cluster de computadores pode ter seus resultados publicados em um evento de computação paralela, como o WSCAD/SBAC, ao mesmo tempo que sob este mesmo tema, porém com enfoque no ensino de programação paralela, pode ser publicado em evento de educação, como o WEAC.</P>
+
+
+<H4 id="NovasPesquisas">Novas linhas de pesquisa</H4>
+<P>Atualmente há diversas utilizações do AG em placas gráficas, através da GPGPU (General Purpose Graphics Processing Unit), que vêm obtendo resultados ainda mais satisfatórios em relação ao tempo de processamento. </P>
+<!-- Fim Introdução -->
+
+<!-- Algoritmos Genéticos -->
+<H3 id="AlgoritmosGeneticos">Algoritmos Genéticos</H3>
+<P>Os Algoritmos Genéticos (AGs) podem possuir diversas variações quanto a forma de se realizar as operações de reprodução e evolução dos indivíduos de uma população. </P>
+
+<H4 id="ConceitosUtilizados">Conceitos utilizados</H4>
+<P>Aqui são apresentados alguns dos principais conceitos utilizados em um AG tradicional.</P>
+
+<H4 id="BoasAplicacoes">Aplicações indicadas</H4> 
+<P>Os Algoritmos Genéticos podem ser utilizados em qualquer problema de otimização, especialmente problemas onde a região de soluções possua restrições.</P>
+<P>Além das aplicações científicas que podem ser desenvolvidas, já existem alguns programas comerciais que usam o AG, como relatado por <a href="#RefLinden08">[Linden, 2008]</a>, por exemplo:</P>
+
+<P><a href="http://www.palisade.com/evolver/" target="_blank">Evolver</a>: Funciona dentro do Microsoft Excel, resolvendo cálculos financeiros, distribuições, agendamentos, e quaisquer problemas que possam ser modelados no Microsoft Excel, incluindo problemas não-lineares, resolvendo-os através de Algoritmos Genéticos (OptQuest) e técnicas de programação linear.</P>
+
+<P><a href="http://www.optiwater.com/optiga.html" target="_blank">OptiGA</a>: Programa escrito em Visual Basic com o propósito de se modelar a qualquer problema proposto pelo usuário, bastando a este codificar como será a avaliação dos indivíduos. <BR />
+O programa usa diversos métodos de crossover e mutação, dos quais o usuário pode selecionar qual será melhor para seu problema. <BR />
+O usuário pode também criar sua própria função de mutação e/ou cruzamento.</P>
+
+<P><a href="http://www.wardsystems.com/genehunter.asp" target="_blank">Gene Hunter</a>: Utiliza metodologia de algoritmo genético segundo o encontrado no estado da arte para ser uma poderosa ferramenta de otimização.<BR />
+Também é uma extensão para o Microsoft Excel, e pode realizar tarefas semelhantes ao <a href="http://www.palisade.com/evolver/" target="_blank">Evolver</a>. Porém, com alguns problemas tradicionais para resolução pelo algoritmo genético, como o problema do caixeiro viajante, por exemplo, como benchmark.
+</P>
+
+<P><a href="http://www.nd.com/genetic/" target="_blank">OptiGen</a>: Implementado com programação orientada a objetos, com sua própria interface com usuário, e combina poderosas técnicas de otimização dos algoritmos genéticos, com single e multi objetivos.
+</P>
+
+<P><a href="http://www.geatbx.com/" target="_blank">GEATbx - The Genetic and Evolutionary Algorithm Toolbox for Matlab</a>: Provê capacidade para otimização global em Matlab para resolver problemas não adequados para abordagens tradicionais de otimização. Permite que usuários avançados e iniciantes obtenham rápido resultado. <BR />
+O GEATbx contém extensões necessárias para problemas de otimização do mundo real. Possui suporte a programação multi-estratégia e multi-objetivo. Todos códigos-fonte são disponibilizados por 400 euros.</P>
+
+
+<H4 id="MasAplicacoes">Aplicações não indicadas</H4>
+<P>Problemas da classe dos convexos, sem restrições dentro do espaço de soluções, podem obter resposta rápida e com programação simplificada por um algoritmo determinístico.</P>
+<P>Nesta classe de problemas, o algoritmo genético pode não obter o resultado ótimo e com execução mais lenta do que do algoritmo determinístico. Portanto, problemas onde não se tenham restrições no espaço de soluções, não são adequados ao algoritmo genético.</P>
+<P>No trabalho de [Soares, 1997] é apresentado, apenas para simplificação da explicação do algoritmo genético, um problema para encontrar o valor máximo para a função f(x) = 2x, tal que 0 <= x <= 31. A resolução pelo algoritmo genético gastou 10 gerações (iterações) para encontrar a solução. Enquanto um algoritmo determinístico poderia encontrar a solução com 1 iteração.</P>
+
+<H4 id="AGPs">Os AGs e o Paralelismo</H4>
+<P>Para implementação do paralelismo há diversas possibilidades, tais como algoritmos embaraçosamente paralelos, algoritmo genético globalmente paralelo e modelo de ilhas [Gómez, et. al. 2009].</P>
+<P>O mais utilizado é o modelo em ilhas. Mas, neste modelo há diversas possibilidades, como colocar cada ilha com sua própria população, e esta executa suas funções de cruzamentos e mutações independentes das demais ilhas, que é o mais comum de se encontrar na litetura. Há também a possibilidade de usar uma única população global e cada treco da população é avaliado por uma ilha diferente, entre outras possibilidades.</P> 
+<P>Em ambos casos, cada ilha é controlada por uma thread do processador, e em tempo oportuno seus melhores indivíduos são transmitidos para outra (s) ilha (s). Portanto, quanto maior o número de threads que puderem ser executadas ao mesmo tempo, maior a probabilidade de uma ilha encontrar a solução mais rapidamente.</P>
+<P>Cada ilha pode possuir seus próprios parâmetros de execução, como probabilidade de mutação e quantidade de cruzamentos por indíviduo e o local para corte do indivíduo. Utilizando disto, [Viana, 2009] propos a utilização de diversas ilhas, disponibilizada através de um cluster de computadores. Todas as ilhas, exceto uma, possuiam um baixo valor de mutação, para realizar a busca da maneira tradicional de um algoritmo genético, porém uma ilha possuia mutação mais elevada. Esta técnica se mostrou muito eficiente ao encontrar a solução mais rapidamente com a ajuda de uma busca aleatoria, em conjunto com a busca tradicional. Ao realizar a troca de indivíduos com esta ilha de busca aleatória, uma ilha passava a realizar a busca em outros espaços, evitando ótimos locais e buscando em espaços onde havia a probabilidade de se encontrar um valor ótimo.</P>
+
+<H4 id="Implementacao">Simples Implementações</H4>
+<P>A implementação a partir do código alto-nível apresentado pode ser bem simples e pode ser realizada em diversas linguagens e ferramentas populares.</P>
+<P>Para alguém com experiência em linguagens de programação imperativas, como C/C++ ou Java, o programa pode obter bom ganho de desempenho com o uso de paralelismo, mesmo que o usuário não tenha experiência em programação paralela.</P>
+<P>Bibliotecas como o OpenMP podem tornar esta uma fácil tarefa, uma vez que são necessários poucos conhecimentos a respeito da própria biblioteca e da arquitetura do computador.</P>
+<P>É claro que quanto maior a experiência nestes campos, melhor pode ser o ganho de desempenho.</P>
+<BR/>
+<P>Considerando a linguagem de programação C como uma linguagem largamente difundida e bastante otimizada, tomaremos sua implementação como exemplo para inserção do paralelismo.</P>
+<BR/>
+
+<H5 id="COpenMP">Linguagem C com OpenMP</H5>
+<P>Com a inserção da biblioteca &lt;<b>omp.h</b>&gt;, o programa já passa a poder utilizar das diretivas e funções do OpenMP. Por ser de alto-nível em relação ao hardware, o OpenMP necessita que o programador informe a quantidade de threads que deseja, não necessitando de conhecimentos sobre seu gerenciamento.</P>
+<P>A própria biblioteca se encarrega de criar as threads no Sistema Operacional e gerenciá-las.</P>
+<P>Algumas otimizações podem ser feitas em função da arquitetura disponível. Por exemplo, o número de threads que serão criadas em função do número de núcleos disponíveis, ou se será utilizado a diretiva para desenrolar um for.</P>
+<!-- Fim Algoritmos Genéticos -->
+
+<!-- Praticas -->
+<H3 id="Praticas">Práticas</H3>
+<P>Nesta seção são apresentados exemplos de aplicações modelados e implementados no AG.</P>
+<H4 id="ExSimples">Exemplos Simples</H4>
+<!-- Fim Praticas -->
+
+<!-- Referencias -->
+<H3 id="Referencias">Referências</H3>
+<P id="RefDisserGustavo">[Soares, 1997] SOARES, Gustavo Luis. Algoritmos Genético: Estudo, Novas Técnicas e Aplicações. 1997. Dissertação, Universidade Federal de Minas Gerais, Conselho Nacional de Desenvolvimento Científico e Tecnológico. </P>
+<P id="RefGoldberg86">[Goldberg, 1989] GOLDBERG, D. E. Genetic Algorithms in Search, Optimization and Machine Learning. 1st. ed. Boston, MA, USA: Addison-Wesley Longman Publishing Co., Inc., 1989. ISBN 0201157675.</P>
+<P id="RefLinden08">[Linden, 2008] LINDEN, Ricardo. Algoritmos Genéticos - uma importante ferramenta da inteligência computacional - 2ª Edição. BR: Brasport, 2008.</P>
+<P id="RefMonoHarison">[Silva, 2012] SILVA, H. H. Algoritmo Genético Paralelo para resolução do Problema do Caixeiro Viajante. [S.l.], Trabalho de Diplomação, Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte. Junho 2012.</P>
+<P id="RefViana09">[Viana, 2009] VIANA, I. Éveli M. et al. Algoritmo Genético Paralelo com uma Ilha Semi-Aleatória. In: WSCAD-WIC (Ed.). Anais X Simpósio em Sistemas Computacionais. [S.l.]: SBC, 2009. X.</P>
+<!-- Fim Referencias -->
+
+<!-- Conclusao -->
+<H3 id="Conclusao">Conclusão</H3>
+<P>Assim ...</P>
+<H4 id="TrabFut">Trabalhos Futuros</H4>
+<P>Como trabalhos futuros podemos ...</P>
+
+<!-- Fim Conclusao -->
+
+</DIV> <!-- fim DIV cen -->
+
+<!-- DIV direita -->
+<DIV class="dir">
+<H4>Links úteis:</H4>
+<H5>Algoritmos Genéticos:</H5>
+<P><a href="http://www.algoritmosgeneticos.com.br/" target="_blank">Ricardo Linden</a></P>
+<P><a href="http://dl.acm.org/citation.cfm?id=534133" target="_blank">Goldberg</a></P>
+<BR /><P><a href="http://lmgtfy.com/?q=algoritmos+gen%C3%A9ticos" target="_blank">Google it!</a></P>
+<BR />
+<H5>Grupos de Pesquisa</H5>
+<P><a href="http://www.inf.ufpr.br/aurora/tutoriais/Ceapostila.pdf" target="_blank">UFPR</a></P>
+<P><a href="http://dgp.cnpq.br/buscaoperacional/detalhegrupo.jsp?grupo=0333304T5FMW7H" target="_blank">UFMG</a></P>
+<P><a href="http://www.ime.usp.br/dcc/pos/areas/otimizacaocombinatoria" target="_blank">Instituto de Matemática e Estatística da USP</a></P>
+<P><a href="http://www.ucam-campos.br/mpoic/linha-de-pesquisa-1/" target="_blank">Universidade Candido Mendes</a></P>
+<P><a href="http://dgp.cnpq.br/buscaoperacional/" target="_blank">Pesquisa Grupos CNPQ</a></P>
+<BR />
+<H5>Outros trabalhos dos autores:</H5>
+<P><a href="http://www.bibliotecadigital.ufmg.br/dspace/bitstream/1843/BUOS-8CKEEQ/1/gustavo_lu_s_soares.pdf" target="_blank">Tese Dr. Gustavo Luís Soares</a></P>
+<P><a href="http://pessoal.utfpr.edu.br/mariano/arquivos/VAS1997_1.pdf" target="_blank">Dissertação Dr. Gustavo Luís Soares</a></P>
+
+</DIV> <!-- Fim DIV direita -->
+
+</BODY>
+</HTML>

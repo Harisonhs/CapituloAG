@@ -1,0 +1,154 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<style type="text/css">
+
+DIV.esq {
+	float: left;
+	width: 15%;
+	margin: 20px 0px 10px 10px;
+	position:fixed;
+	z-index:999; 
+	left:0; 
+	top:20;
+	overflow:hidden;
+}
+DIV.dir {
+	float: right;
+	text-align: left;
+	width: 80%;
+	position: auto;
+	margin: 10px 0px 20px 10px;
+}
+P {
+	text-align: left;
+	padding-left: 10px;
+}
+
+H3 {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	color: navy;
+	padding-bottom: 3px;
+	padding-top: 15px;
+}
+
+H4{
+	padding-left: 40px;
+}
+</style>
+
+<script type="text/javascript">
+function exibe(id) {
+	if(document.getElementById(id).style.display=="none") {
+		document.getElementById(id).style.display = "inline";
+		document.getElementById(id+'icon').innerHTML = " <img src='icon_Menos.gif'/> ";
+	}
+	else {
+		document.getElementById(id).style.display = "none";
+		document.getElementById(id+'icon').innerHTML = " <img src='icon_Mais.gif'/> ";
+	}
+}
+</script>
+
+<TITLE>Cap. AG</TITLE>
+</HEAD>
+<BODY>
+
+<DIV class="esq">
+<H2>Seções</H2>
+
+<a href="#" onclick="javascript: exibe('intro');" id="introicon"> <img src='icon_Mais.gif'/> </a><a href="#Introducao">Introdução</a><br />
+	<DIV id="intro" style="display: none;">
+	<UL>
+	<LI>Apresentar objetivos</LI>
+	<LI>Apresentar o público desejado</LI>
+	<LI>Indicar leituras complementares para ambos públicos</LI>
+	<LI>Locais e grupos de pesquisa onde o tema tem sido mais estudado</LI>
+	<LI>Apontar a existência de novas linhas de pesquisa, como utlizando GPUs</LI>
+	</UL>
+	</DIV>
+
+<a href="#" onclick="javascript: exibe('obj');" id="objicon"> <img src='icon_Mais.gif'/> </a><a href="#Objetivos">Objetivos</a><br />
+	<DIV id="obj" style="display: none;">
+	<UL>
+	<LI>Apresentar a junção do AG com paralelismo</LI>
+	<LI>Apresentar resultados satisfatórios do AGP</LI>
+	<LI>Mostrar casos onde o AG não é eficiente</LI>
+	<LI> <a href="#Implementacao">Convencer o leitor de que a implementação pode não ser tão difícil</a></LI>
+	</UL>
+	</DIV>
+
+<a href="#" onclick="javascript: exibe('AG');" id="AGicon"> <img src='icon_Mais.gif'/> </a><a href="#">Conceitos AG</a><br />
+	<DIV id="AG" style="display: none;">
+	<UL>
+	<LI>Pequena seção para apresentação dos conceitos utilizados apenas. Sem investir em conceitos não utilizados porém existentes no AG. Por exemplo, explicar um pouco sobre o cruzamento, mas não é necessário explicar as diferentes formas de realizá-lo</LI>
+	</UL>
+	</DIV>
+
+<a href="#" onclick="javascript: exibe('rb');" id="rbicon"> <img src='icon_Mais.gif'/> </a><a href="#">Trabalhos correlatos</a><br />
+	<DIV id="rb" style="display: none;">
+	<UL>
+	<LI>Como subseção de conceitos AG. Indicado como leitura complementar</LI>
+	<LI>Apresentar os autores do livro com seus trabalhos relacionados</LI>
+	</UL>
+	</DIV>
+
+<a href="#" onclick="javascript: exibe('app');" id="appicon"> <img src='icon_Mais.gif'/> </a><a href="#">Aplicações Indicadas</a><br />
+	<DIV id="app" style="display: none;">
+	<UL>
+	<LI>Aplicações onde o AG / AGP é viável e obtém bons resultados</LI>
+	<LI>Apresentação de aplicações reais onde o AG pode ser aplicado. Dando maior destaque as mais facilmente implementadas</LI>
+	<LI>Programas populares que usam AG</LI>
+	</UL>
+	</DIV>
+
+<a href="#" onclick="javascript: exibe('ex');" id="exicon"> <img src='icon_Mais.gif'/> </a><a href="#">Exemplos Simples</a><br />
+	<DIV id="ex" style="display: none;">
+	<UL>
+	<LI>Apresentar implementações simples em linguagem alto nível</LI>
+	</UL>
+	</DIV>
+	
+	<BR />
+	<BR />
+	<H2>Links úteis:</H2>
+
+<a href="www.bibliotecadigital.ufmg.br/dspace/bitstream/1843/BUOS-8CKEEQ/1/gustavo_lu_s_soares.pdf">Tese Dr. Gustavo Luís Soares</a><br /><br />
+<a href="http://pessoal.utfpr.edu.br/mariano/arquivos/VAS1997_1.pdf">Dissertação Dr. Gustavo Luís Soares</a><br />
+
+</DIV> <!-- fim DIV esq -->
+
+
+<!-- DIV dir -->
+<DIV class="dir">
+<H2>Algoritmo Genético</H2>
+Para este capítulo é esperado um leitor que já tenha conhecimentos em AG.
+
+<H3 id="Introducao">Introdução</H3>
+<P></P>
+
+<H3 id="Objetivos">Objetivos</H3>
+<P>O objetivo deste capítulo é apresentar o ganho de desempenho que uma aplicação de Algoritmo Genético Paralelo pode obter com uma boa utilização dos recursos disponíveis na maioria dos computadores comercializados atualmente.</P>
+<P>Não é objetivo deste livro introduzir conceitos básicos do AG, muito menos o ensino de programação paralela para propósitos gerais. Espera-se que o leitor se sinta a vontade com conceitos básicos do AG.</P>
+<P>Também não é objetivo propor melhorias ao AG.</P>
+
+<H3 id="Implementacao">Seção de implementação</H3>
+<P>A implementação a partir do código alto-nível apresentado pode ser bem simples e pode ser realizada em diversas linguagens e ferramentas populares.</P>
+<P>Para alguém com experiência em linguagens de programação imperativas, como C/C++ ou Java, o programa pode obter bom ganho de desempenho com o uso de paralelismo, mesmo que o usuário não tenha experiência em programação paralela.</P>
+<P>Bibliotecas como o OpenMP podem tornar esta uma fácil tarefa, uma vez que são necessários poucos conhecimentos a respeito da própria biblioteca e da arquitetura do computador.</P>
+<P>É claro que quanto maior a experiência nestes campos, melhor pode ser o ganho de desempenho.</P>
+<BR/>
+<P>Considerando a linguagem de programação C como uma linguagem largamente difundida e bastante otimizada, tomaremos sua implementação como exemplo para inserção do paralelismo.</P>
+<BR/>
+
+<H4 id="COpenMP">Linguagem C com OpenMP</H4>
+<P>Com a inserção da biblioteca &lt;<b>omp.h</b>&gt;, o programa já passa a poder utilizar das diretivas e funções do OpenMP. Por ser de alto-nível em relação ao hardware, o OpenMP necessita que o programador informe a quantidade de threads que deseja, não necessitando de conhecimentos sobre seu gerenciamento.</P>
+<P>A própria biblioteca se encarrega de criar as threads no Sistema Operacional e gerenciá-las.</P>
+<P>Algumas otimizações podem ser feitas em função da arquitetura disponível. Por exemplo, o número de threads que serão criadas em função do número de núcleos disponíveis, ou se será utilizado a diretiva para desenrolar um for.</P>
+
+
+</DIV> <!-- fim DIV esq -->
+
+</BODY>
+</HTML>
